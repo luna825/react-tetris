@@ -19,12 +19,17 @@ var config={
         exclude:/node_modules/,
         loader:'babel-loader',
         query:{
-          presets:['es2015','react','stage-0']
+          presets:['es2015','react','stage-0'],
+          plugins:['transform-decorators-legacy']
         }
       },
       {test: /\.(jpe?g|png|gif|svg)$/, loader: 'url?limit=1024&name=img/[name].[ext]'},
       {test: /\.scss$/, loader:'style!css?modules&localIdentName=[local]-[hash:base64:5]!sass'},
     ]
+  },
+  resolve:{
+    modulesDirectories: ['src', 'node_modules'],
+    extensions: ['', '.json', '.js', '.jsx']
   },
   plugins:[
     new webpack.HotModuleReplacementPlugin()
