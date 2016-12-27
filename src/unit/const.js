@@ -54,4 +54,4 @@ const blankMatrix = (()=>{
 })();
 
 
-export { blockShape, origin, blankMatrix, StorageKey, blockTypes}
+export { blockShape, origin, blankMatrix, StorageKey, blockTypes, blankLine}

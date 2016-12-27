@@ -1,5 +1,6 @@
 import * as reducerType from 'reducer/types'
-import getNextType from 'unit'
+import {getNextType} from 'unit'
+import Block from 'unit/block'
 
 export function matrix(data){
   return {
@@ -20,4 +21,11 @@ export function nextBlock(next = getNextType()) {
     type: reducerType.NEXT_BLOCK,
     data: next,
   };
+}
+
+export function startLines(n) {
+  return {
+    type: reducerType.START_LINES,
+    data:n
+  }
 }
